@@ -1,0 +1,27 @@
+	html, body {
+		height: 100%;
+		margin: 0;
+	}
+	.content {
+		min-height: 100%;
+	}
+	.content-inside {
+		padding-bottom: 50px;
+	}
+	.footer {
+		height: 50px;
+		margin-top: -50px;
+		background-color:#f2a463;
+		text-align:center;
+	}
+	.about-icon {
+		background-color:#f2a463;
+		border-radius:50%;
+	}
+	.iCont{
+		width:24.5%;
+		height:280px;
+		float:left;
+		margin-left:0.5%;
+		margin-bottom:5px;
+	}

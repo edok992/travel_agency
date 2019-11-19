@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gallery</title>
+	<meta charset="utf-8">
+	<link href="newstyle.css" rel="stylesheet">
+	<link rel="stylesheet" 
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+	crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+	crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+	crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+	crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="content">
+<div class="content-inside">
+<header>
+	<nav class="navbar nav-tabs navbar-expand-lg navbar-light bg-default" style="margin:0 15%;">
+		<a class"navbar-brand" href="home.html">
+			<img src="Resursi/Slike/logo.jpg" style="width:100px;">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" 
+		data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+		aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="home.html">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="about.html">About Us</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="destinations.html">Destinations</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" href="gallery.html">Gallery</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="blog.html">Blog</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="contact.html">Contact Us</a>
+			</li>
+		</ul>
+		</div>
+	</nav>
+</header>
+
+<section style="background-image:url(Resursi/Slike/contest_image.jpg); width:100%;
+	height:100%; background-size:100% 100%;">
+	<div  style="margin-left:45%;margin-right:45%;padding:50px 0;">
+	<h3 style="margin-top:10px;">UPLOAD PHOTO AND WIN A PRIZE</h3>
+	<p>Upload your photo from most interesting destinations and get a chance
+	 to win a prize.</p>
+	 <p>You can win a trip for two and many other prizes!</p>
+	 </div>
+</section>
+
+<section style="margin:0 20%; margin-top:10px; clear:both; overflow:hidden;">
+	<img src="Resursi/Slike/athen.jpg" class="iCont">
+	<img src="Resursi/Slike/dubrovnik.jpg" class="iCont">
+	<img src="Resursi/Slike/greece.jpg" class="iCont">
+	<img src="Resursi/Slike/havana.jpg" class="iCont">
+	<img src="Resursi/Slike/london.jpeg" class="iCont">
+	<img src="Resursi/Slike/paris.jpg" class="iCont">
+	<img src="Resursi/Slike/quiske.jpg" class="iCont">
+	<img src="Resursi/Slike/rio.jpg" class="iCont">
+	<img src="Resursi/Slike/rome.jpg" class="iCont">
+	<img src="Resursi/Slike/taj_mahal.jpg" class="iCont">
+	<img src="Resursi/Slike/thailand.jpg" class="iCont">
+	<img src="Resursi/Slike/venice.jpg" class="iCont">
+	<img id="point">
+</section>
+<section style="margin:10px; clear:both; overflow:hidden;">
+<label style="background-image:url(Resursi/Slike/upload_photo.png); float:right; 
+	width:150px; height:150px; background-size:100% 100%;">
+	<input type="file" id="uploader1" onchange="uploadImg()" accept="image/*" style="display:none;"/>
+</label>
+</section>
+
+</div>
+</div>
+<footer class="footer">
+	<p style="padding-top: 5px;"><i>@SmartInIT</i> 2019 | <a href="home.html">Home</a> | 
+	<a href="privacy.html">Privacy Policy</a> | <a href="support.html">Contact Support</a></p>
+</footer>
+
+<script>
+	function uploadImg() {
+	var image = document.getElementById("uploader1");
+	image.class = "iCont";
+	if (image.files.length != 0 && image.files[0].type.match(/image.*/))
+	{
+		var reader = new FileReader();
+		reader.readAsDataURL(image.files[0]);
+
+		reader.onload = function (e) {
+			var endpoint = document.getElementById("point");
+			endpoint.classList.add("iCont");
+			endpoint.src = e.target.result;
+			alert("The image has been uploaded.");
+		};
+		reader.onerror = function (e) {
+			alert("The image cannot be displayed.");
+		};
+	}
+	else {
+		alert("Choose an image");
+	}
+	}
+</script>
+
+</body>
+</html>
+
+
+
+
+
