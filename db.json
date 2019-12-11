@@ -1,0 +1,66 @@
+{
+  "destinations": [
+    {
+      "id": "1",
+      "tour": "London",
+      "when": "30.12.2019",
+      "duration": 7,
+      "price": 950
+    },
+    {
+      "id": "2",
+      "tour": "New York",
+      "when": "04.12.2019",
+      "duration": 10,
+      "price": 1750
+    },
+    {
+      "id": "3",
+      "tour": "Paris",
+      "when": "30.12.2019",
+      "duration": 7,
+      "price": 750
+    },
+    {
+      "id": "4",
+      "tour": "Rome",
+      "when": "29.11.2019",
+      "duration": 5,
+      "price": 800
+    },
+    {
+      "id": "5",
+      "tour": "Thailand",
+      "when": "15.12.2019",
+      "duration": 15,
+      "price": 1550
+    },
+    {
+      "id": "6",
+      "tour": "Venice",
+      "when": "29.11.2019",
+      "duration": 5,
+      "price": 550
+    }
+  ],
+  "reservations": [
+    {
+      "id": "1",
+      "name": "Radni",
+      "surname": "Primer",
+      "email": "email@sample.com",
+      "destination": "London",
+      "price": 950,
+      "note": "Na primer, ovo bi bio primer. A ako nije primer, onda je primer kako se ne pravi primer."
+    },
+    {
+      "id": "2",
+      "name": "Drugi",
+      "surname": "Primerak",
+      "email": "email2@example.com",
+      "destination": "Rome",
+      "price": 800,
+      "note": "Stvarno je primer, i to veoma primeren primer."
+    }
+  ]
+}

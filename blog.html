@@ -44,6 +44,9 @@
 				<a class="nav-link" href="destinations.html">Destinations</a>
 			</li>
 			<li class="nav-item">
+				<a class="nav-link" href="booking.html">Booking</a>
+			</li>
+			<li class="nav-item">
 				<a class="nav-link" href="gallery.html">Gallery</a>
 			</li>
 			<li class="nav-item">
@@ -62,26 +65,30 @@
 </section><br/>
 <section style="margin: 0 20%;">
 	<div class="row">
-		<div class="col-lg-10">
-			<div class="post">
+		<div id ="posts" class="col-lg-9">
+			<div class="post destinations">
 				<div class="row">
 					<div class="col-lg-6">
 						<img src="Resursi/Slike/explore_serbia.jpg">
 					</div>
 					<div class="col-lg-6">
-						<h6 style="color:#f2a463;">Explore Serbia: Top Destinations To Visit</h6>
+						<h6 style="color:#f2a463;" class="rep1">Explore Serbia: Top Destinations To Visit</h6>
 						<p style="color:lightgray;">12.11.2019</p>
 						<p>New or already known destinations in Serbia and the Balkans in a different way.
 						In our Tours you can experience the challenge, adventure, and authentic experiences,
 						complemented by tradition and delicious local food. So if you're expecting a country
 						of concrete, check out this guide to my top 5 favorite places to visit in Serbia.</p>
-						<button>Read more</button>
+						<button onclick="post_1()">Read more</button>
 					</div>
-					<div class="col-lg-12"><hr/>
+					<div class="col-lg-12">
+					<hr/>
+						<p style="color:lightgray;"><img src="Resursi/Slike/author.png" class="minpic">
+						@Hulk&emsp;&emsp;<img src="Resursi/Slike/category.png" class="minpic">Destinations
+						&emsp;&emsp;<img src="Resursi/Slike/comments.png" class="minpic">(2)</p>
 					</div>
 				</div>
 			</div>
-			<div class="post">
+			<div class="post destinations">
 				<div class="row">
 					<div class="col-lg-6">
 						<img src="Resursi/Slike/travel_trends.jpg">
@@ -93,13 +100,17 @@
 						In our Tours you can experience the challenge, adventure, and authentic experiences,
 						complemented by tradition and delicious local food. So if you're expecting a country
 						of concrete, check out this guide to my top 5 favorite places to visit in Serbia.</p>
-						<button>Read more</button>
+						<button onclick="post_2()">Read more</button>
 					</div>
-					<div class="col-lg-12"><hr/>
+					<div class="col-lg-12">
+					<hr/>
+						<p style="color:lightgray;"><img src="Resursi/Slike/author.png" class="minpic">
+						@CatWoman&emsp;&emsp;<img src="Resursi/Slike/category.png" class="minpic">Destinations
+						&emsp;&emsp;<img src="Resursi/Slike/comments.png" class="minpic">(2)</p>
 					</div>
 				</div>
 			</div>
-			<div class="post">
+			<div class="post travelTips">
 				<div class="row">
 					<div class="col-lg-6">
 						<img src="Resursi/Slike/sress_free_vacation.png">
@@ -111,13 +122,17 @@
 						In our Tours you can experience the challenge, adventure, and authentic experiences,
 						complemented by tradition and delicious local food. So if you're expecting a country
 						of concrete, check out this guide to my top 5 favorite places to visit in Serbia.</p>
-						<button>Read more</button>
+						<button onclick="post_3()">Read more</button>
 					</div>
-					<div class="col-lg-12"><hr/>
+					<div class="col-lg-12">
+					<hr/>
+						<p style="color:lightgray;"><img src="Resursi/Slike/author.png" class="minpic">
+						@TonyStark&emsp;&emsp;<img src="Resursi/Slike/category.png" class="minpic">Travel Tips
+						&emsp;&emsp;<img src="Resursi/Slike/comments.png" class="minpic">(2)</p>
 					</div>
 				</div>
 			</div>
-			<div class="post">
+			<div class="post travelTips">
 				<div class="row">
 					<div class="col-lg-6">
 						<img src="Resursi/Slike/airbnb_vs_hotel.png">
@@ -129,26 +144,257 @@
 						In our Tours you can experience the challenge, adventure, and authentic experiences,
 						complemented by tradition and delicious local food. So if you're expecting a country
 						of concrete, check out this guide to my top 5 favorite places to visit in Serbia.</p>
-						<button>Read more</button>
+						<button onclick="post_4()">Read more</button>
 					</div>
 					<div class="col-lg-12">
 						<hr/>
-						<p style="color:lightgray;"><img src="Resursi/Slike/author.png" style="height:12px;width:12px;">
-						@Hulk</p>
+						<p style="color:lightgray;"><img src="Resursi/Slike/author.png" class="minpic">
+						@BruceWayne&emsp;&emsp;<img src="Resursi/Slike/category.png" class="minpic">Travel Tips
+						&emsp;&emsp;<img src="Resursi/Slike/comments.png" class="minpic">(1)</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-2">
+		<div class="col-lg-3">
+			<h5>POPULAR</h5>
+			<p class="rep1">Explore Serbia: Top Destinations To Visit</p><hr>
+			<p>Travel Trends To Watch For In 2020</p><hr>
+			<p>How To Have A Completely Stress-Free Vacation</p><hr>
+			<p>6 Reasons To Choose A Hotel Over Airbnb</p><hr>
+			<h5>CATEGORIES</h5>
+			<p>Travel Tips (<span id="numberOfTips"></span>)</p><hr>
+			<p>Destinations (<span id="numberOfDest"></span>)</p><hr>
+			<p>Summer Vacation (<span id="numberOfSVac"></span>)</p><hr>
+			<h5>RECENT POSTS</h5>
+			<p class="rep1">Explore Serbia: Top Destinations To Visit</p><hr>
+			<p>Travel Trends To Watch For In 2020</p><hr>
+			<p>How To Have A Completely Stress-Free Vacation</p><hr>
+			<h5>Subscribe to our Newsletter</h5>
+			<p>Want our blogs emailed directly to you? Subscribe to our newsletter!</p><br>
+			<input type="email" id="subscribe" style="border-radius: 5px;"><br><br>
+            <button onclick="subscribe()"
+			style="background-color: #f2a463; color: white; border-radius: 5px;">Subscribe</button>
+
 		</div>
 	</div>
 </section>
+
+<div id="post1" class="col-lg-9 fullpost" style="display: none;">
+	<h3 style="color: #f2a463;">Explore Serbia: Top Destinations To Visit</h3>
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+	has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+	took a galley of type and scrambled it to make a type specimen book. It has survived not 
+	only five centuries, but also the leap into electronic typesetting, remaining essentially 
+	unchanged.</p>
+	<ol>
+	<li>
+	<p><b>Uvac</b></p>
+	<img src="Resursi/Slike/uvac.jpg">
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+	has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+	took a galley of type and scrambled it to make a type specimen book. It has survived not 
+	only five centuries, but also the leap into electronic typesetting, remaining essentially 
+	unchanged.</p>
+	</li>
+	<li>
+	<p><b>Sremski Karlovci</b></p>
+	<img src="Resursi/Slike/sremski_karlovci.jpg">
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+	has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+	took a galley of type and scrambled it to make a type specimen book. It has survived not 
+	only five centuries, but also the leap into electronic typesetting, remaining essentially 
+	unchanged.</p>
+	</li>
+	<li>
+	<p><b>Felix Romuliana</b></p>
+	<img src="Resursi/Slike/felix_romuliana.jpg">
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+	has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+	took a galley of type and scrambled it to make a type specimen book. It has survived not 
+	only five centuries, but also the leap into electronic typesetting, remaining essentially 
+	unchanged.</p>
+	</li>
+	<li>
+	<p><b>Djavolja Varos</b></p>
+	<img src="Resursi/Slike/djavolja_varos.jpg">
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+	has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+	took a galley of type and scrambled it to make a type specimen book. It has survived not 
+	only five centuries, but also the leap into electronic typesetting, remaining essentially 
+	unchanged.</p>
+	</li>
+	<li>
+	<p><b>Deliblatska Pescara</b></p>
+	<img src="Resursi/Slike/delibatska_pescara.jpg">
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+	has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+	took a galley of type and scrambled it to make a type specimen book. It has survived not 
+	only five centuries, but also the leap into electronic typesetting, remaining essentially 
+	unchanged.</p>
+	</li>
+	</ol><hr>
+	
+	<h2>Comments</h2>
+	<ul>
+		<li>Honestly, who even wrote this?.</li>
+		<li>Why even bother reading?</li>
+	</ul><br/>
+	
+	<textarea id="new_comment" class="form-control" rows="4" style="width:100%;" placeholder="Write your comment here..."></textarea><br/>
+	<button onclick="postComment()">Post Comment</button><br/>
+	
+	<button onclick="back()">Back to the posts</button><br>
+</div>
+
+<div id="post2" class="col-lg-9 fullpost" style="display: none;">
+	<h3 style="color: #f2a463;">Travel Trends To Watch For in 2020</h3>
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+	has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+	took a galley of type and scrambled it to make a type specimen book. It has survived not 
+	only five centuries, but also the leap into electronic typesetting, remaining essentially 
+	unchanged.</p>
+	<ol>
+	<li>
+	<p><b>Athen</b></p>
+	<img src="Resursi/Slike/athen.jpg">
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+	has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+	took a galley of type and scrambled it to make a type specimen book. It has survived not 
+	only five centuries, but also the leap into electronic typesetting, remaining essentially 
+	unchanged.</p>
+	</li>
+	<li>
+	<p><b>Thailand</b></p>
+	<img src="Resursi/Slike/thailand.jpg">
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+	has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+	took a galley of type and scrambled it to make a type specimen book. It has survived not 
+	only five centuries, but also the leap into electronic typesetting, remaining essentially 
+	unchanged.</p>
+	</li>
+	</ol><hr>
+	
+	<h2>Comments</h2>
+	<ul>
+		<li>This is very informative.</li>
+		<li>I don' even know how to read...</li>
+	</ul><br/>
+	
+	<textarea id="new_comment" class="form-control" rows="4" style="width:100%;" placeholder="Write your comment here..."></textarea><br/>
+	<button onclick="postComment()">Post Comment</button><br/>
+	
+	<button onclick="back()">Back to the posts</button><br>
+</div>
+
+<div id="post3" class="col-lg-9 fullpost" style="display: none;">
+	<h3 style="color: #f2a463;">How To Have A Completely Stress-Free Vacation</h3>
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+	has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+	took a galley of type and scrambled it to make a type specimen book. It has survived not 
+	only five centuries, but also the leap into electronic typesetting, remaining essentially 
+	unchanged.</p><br/>
+	<p><b>Stress-Free</b></p>
+	<img src="Resursi/Slike/sress_free_vacation.png">
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+	has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+	took a galley of type and scrambled it to make a type specimen book. It has survived not 
+	only five centuries, but also the leap into electronic typesetting, remaining essentially 
+	unchanged.</p><hr>
+	
+	<h2>Comments</h2>
+	<ul>
+		<li>I can't wait to figure this out.</li>
+		<li>Where is the button to book a ticket?</li>
+	</ul><br/>
+	
+	<textarea id="new_comment" class="form-control" rows="4" style="width:100%;" placeholder="Write your comment here..."></textarea><br/>
+	<button onclick="postComment()">Post Comment</button><br/>
+	
+	<button onclick="back()">Back to the posts</button><br>
+</div>
+
+<div id="post4" class="col-lg-9 fullpost" style="display: none;">
+	<h3 style="color: #f2a463;">6 Reasons To Choose A Hotel Over Airbnb</h3>
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+	has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+	took a galley of type and scrambled it to make a type specimen book. It has survived not 
+	only five centuries, but also the leap into electronic typesetting, remaining essentially 
+	unchanged.</p><br/>
+	<ol>
+	<li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+	<li>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</li> 
+	<li>when an unknown printer took a galley of type and scrambled it to make a type</li> 
+	<li>specimen book. It has survived not</li> 
+	<li>only five centuries, but also the leap into</li> 
+	<li>electronic typesetting, remaining essentially unchanged.</li>
+	</ol><hr>
+	
+	<h2>Comments</h2>
+	<ul>
+		<li>Frankly, I have no idea what this text is doing here, the words appear to be about some Lorem Ipsum thing.</li>
+	</ul><br/>
+	
+	<textarea id="new_comment" class="form-control" rows="4" style="width:100%;" placeholder="Write your comment here..."></textarea><br/>
+	<button onclick="postComment()">Post Comment</button><br/>
+	
+	<button onclick="back()">Back to the posts</button>
+</div>
 
 </div>
 </div>
 <footer class="footer">
 	<p style="padding-top: 5px;"><i>@SmartInIT</i> 2019 | <a href="home.html">Home</a> | 
-	<a href="privacy.html">Privacy Policy</a> | <a href="support.html">Contact Support</a></p>
+	<a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact Support</a></p>
 </footer>
+
+<script>
+
+	var numberOfTips = $(".travelTips").length;
+	$("#numberOfTips").html(numberOfTips);	
+	var numberOfDest = $(".destinations").length;
+	$("#numberOfDest").html(numberOfDest);
+	var numberOfSVac = $(".summervacation").length;
+	$("#numberOfSVac").html(numberOfSVac);
+	
+	function subscribe() {
+		var toDisplay = $("#subscribe").val();
+		alert("Thank you for subscribing to our newsletter! You will soon start receiving our newest blogposts at: " + toDisplay);
+		$("#subscribe").val("");
+	}
+	
+	function back() {
+		//$(this).closest("div").attr("id").replaceWith($("#posts"));
+		//$(this).parent().css("display","none");                       Ne znam zašto ovo odbija da radi.
+		window.location.reload();
+	}
+	
+	function post_1 (){
+        $('#posts').replaceWith($('#post1'));
+        $('#post1').css("display","initial");     
+	};
+	
+	function post_2 (){
+        $('#posts').replaceWith($('#post2'));
+        $('#post2').css("display","initial");     
+	};
+	
+	function post_3 (){
+        $('#posts').replaceWith($('#post3'));
+        $('#post3').css("display","initial");     
+	};
+	
+	function post_4 (){
+        $('#posts').replaceWith($('#post4'));
+        $('#post4').css("display","initial");     
+	};
+	
+	function postComment() {
+		if ($("#new_comment").val() != "") {
+			$("ul").append("<li>"+ $("#new_comment").val() + "</li>");
+			$("#new_comment").val("")
+		}
+	}
+	
+</script>
 </body>
 </html>

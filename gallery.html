@@ -44,6 +44,9 @@
 				<a class="nav-link" href="destinations.html">Destinations</a>
 			</li>
 			<li class="nav-item">
+				<a class="nav-link" href="booking.html">Booking</a>
+			</li>
+			<li class="nav-item">
 				<a class="nav-link active" href="gallery.html">Gallery</a>
 			</li>
 			<li class="nav-item">
@@ -67,7 +70,7 @@
 	 </div>
 </section>
 
-<section style="margin:0 20%; margin-top:10px; clear:both; overflow:hidden;">
+<section id="images" style="margin:0 20%; margin-top:10px; clear:both; overflow:hidden;">
 	<img src="Resursi/Slike/athen.jpg" class="iCont">
 	<img src="Resursi/Slike/dubrovnik.jpg" class="iCont">
 	<img src="Resursi/Slike/greece.jpg" class="iCont">
@@ -93,22 +96,23 @@
 </div>
 <footer class="footer">
 	<p style="padding-top: 5px;"><i>@SmartInIT</i> 2019 | <a href="home.html">Home</a> | 
-	<a href="privacy.html">Privacy Policy</a> | <a href="support.html">Contact Support</a></p>
+	<a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact Support</a></p>
 </footer>
 
 <script>
 	function uploadImg() {
 	var image = document.getElementById("uploader1");
-	image.class = "iCont";
 	if (image.files.length != 0 && image.files[0].type.match(/image.*/))
 	{
 		var reader = new FileReader();
 		reader.readAsDataURL(image.files[0]);
 
 		reader.onload = function (e) {
-			var endpoint = document.getElementById("point");
-			endpoint.classList.add("iCont");
-			endpoint.src = e.target.result;
+			var newpic = document.createElement('img');
+			newpic.classList.add("iCont");
+			newpic.src = e.target.result;
+			var locate = document.getElementById("images");
+			locate.appendChild(newpic);
 			alert("The image has been uploaded.");
 		};
 		reader.onerror = function (e) {

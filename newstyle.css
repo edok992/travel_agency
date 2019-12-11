@@ -27,17 +27,66 @@
 	}
 	.post {
 		width:100%; 
-		height:280px; 
 		border: 1px solid lightgray; 
 		margin-bottom:15px;
 		
 	}
 	.post .row {
-		padding:10px; 
-		height:210px;
+		padding:10px;
 		font-size:12px;
 	}
 	.post img {
 		width:95%;
 		height:200px;
+	}
+	img.minpic {
+		width:22px;
+		height:22px;
+	}
+	.col-lg-3 h5 {
+		background-color:#f2a463; 
+		color:white; 
+		padding: 5px;
+	}
+	.col-lg-3 p {
+		color:gray; 
+		font-size:12px; 
+		margin-bottom: 0;
+	}
+	.col-lg-3 hr {
+		margin-top: 2px;
+	}
+	.fullpost img {
+		width: 100%;
+	}
+	.fullpost button {
+		background-color: #f2a463; 
+		color: white; 
+		border-radius: 5px;
+		margin-bottom: 20px;
+	}
+	.fullpost ul {
+		list-style-image: url("Resursi/Slike/author.png");
+	}
+	.fullpost ul li {
+		padding: 0 10px 2px 10px;
+		border: 1px solid gray;
+		border-radius: 5px;
+		margin: 2px;
+	}
+	.view {
+		background-color: #f2a463; 
+		color: white; 
+		padding : 10px; 
+		border-radius: 5px;
+		margin-bottom: 20px;
+	}
+	.table_button {
+		background-color: Transparent; 
+		padding : 3px 10px; 
+		border-radius: 5px;
+		border: 1px solid #f2a463; 
+	}
+		.table_button:hover {
+		background-color: #f2a463; 
 	}

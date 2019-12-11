@@ -44,6 +44,9 @@
 				<a class="nav-link" href="destinations.html">Destinations</a>
 			</li>
 			<li class="nav-item">
+				<a class="nav-link" href="booking.html">Booking</a>
+			</li>
+			<li class="nav-item">
 				<a class="nav-link" href="gallery.html">Gallery</a>
 			</li>
 			<li class="nav-item">
@@ -69,32 +72,32 @@
 	took a galley of type and scrambled it to make a type specimen book.</p>
 <div class="row">
 	<div class="col-lg-3">
-		<img src="Resursi/Slike/fllight.png" style="width:40%; height:100px;">
+		<img src="Resursi/Slike/fllight.png" style="height:100px;">
 		<h4>Amazing travel</h4>
-		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-		Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-		<p><a><i>Read more...</i></a></p>
+		<p class="1" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+		Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p><br/>
+		<p class="expand" id="1"><i>Read more...</i></p>
 	</div>
 	<div class="col-lg-3">
-		<img src="Resursi/Slike/globe.png" style="width:40%; height:100px;">
+		<img src="Resursi/Slike/globe.png" style="height:100px;">
 		<h4>Discover</h4>
-		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-		Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-		<p><a><i>Read more...</i></a></p>
+		<p class="2" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+		Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p><br/>
+		<p id="2"><i>Read more...</i></p>
 	</div>
 	<div class="col-lg-3">
-		<img src="Resursi/Slike/flag.png" style="width:40%; height:100px;">
+		<img src="Resursi/Slike/flag.png" style="height:100px;">
 		<h4>Book your trip</h4>
-		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-		Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-		<p><a><i>Read more...</i></a></p>
+		<p class="3" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+		Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p><br/>
+		<p id="3"><i>Read more...</i></p>
 	</div>
 	<div class="col-lg-3">
-		<img src="Resursi/Slike/support.png" style="width:40%; height:100px;">
+		<img src="Resursi/Slike/support.png" style="height:100px;">
 		<h4>Nice support</h4>
-		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-		Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-		<p><a><i>Read more...</i></a></p>
+		<p class="4" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+		Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p><br/>
+		<p id="4"><i>Read more...</p>
 	</div>
 </div>
 <hr style="border-top: 3px solid #f2a463;"/>
@@ -106,7 +109,7 @@
 	<h3 style="margin-top:10px;">UPLOAD PHOTO AND WIN A PRIZE</h3>
 	<p>Upload your photo from most interesting destinations and get a chance
 	 to win a prize.</p>
-	 <a class="deco" href="gallery.html"><button class="hollow" style="margin-bottom:10px;">DETAILS</button></a>
+	 <a href="gallery.html"><button class="table_button" style="margin-bottom:10px;">DETAILS</button></a>
 	 </div>
 </section>
 
@@ -118,21 +121,21 @@
 			<h4 style="margin-top:150px;color:white;">Venice</h4>
 			<p style="color:white;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
 			Lorem Ipsum has been.</p>
-			<button style="text-align:center">Read more...</button>
+			<button style="text-align:center" data-toggle="modal" data-target="#mod1">Read more...</button>
 		</div>
 		<div class="col-lg-4" style="background-image:url(Resursi/Slike/paris.jpg); 
 		background-size:100% 100%; width:100%; height:400px; text-align:center;">
 			<h4 style="margin-top:150px;color:white;">Paris</h4>
 			<p style="color:white;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
 			Lorem Ipsum has been.</p>
-			<button style="text-align:center">Read more...</button>
+			<button style="text-align:center" data-toggle="modal" data-target="#mod2">Read more...</button>
 		</div>
 		<div class="col-lg-4" style="background-image:url(Resursi/Slike/rome.jpg); 
 		background-size:100% 100%; width:100%; height:400px; text-align:center;">
 			<h4 style="margin-top:150px;color:white;">Rome</h4>
 			<p style="color:white;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
 			Lorem Ipsum has been.</p>
-			<button style="text-align:center">Read more...</button>
+			<button style="text-align:center" data-toggle="modal" data-target="#mod3">Read more...</button>
 		</div>
 	</div>
 <hr style="border-top: 3px solid #f2a463;"/>
@@ -160,7 +163,105 @@
 </div>
 <footer class="footer">
 	<p style="padding-top: 5px;"><i>@SmartInIT</i> 2019 | <a href="home.html">Home</a> | 
-	<a href="privacy.html">Privacy Policy</a> | <a href="support.html">Contact Support</a></p>
+	<a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact Support</a></p>
 </footer>
+
+<div id="mod1" class="modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Venice</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<img src="Resursi/Slike/venice.jpg" style="width: 100%;">
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+				has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+				took a galley of type and scrambled it to make a type specimen book. It has survived not 
+				only five centuries, but also the leap into electronic typesetting, remaining essentially 
+				unchanged.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="mod2" class="modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Paris</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<img src="Resursi/Slike/paris.jpg" style="width: 100%;">
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+				has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+				took a galley of type and scrambled it to make a type specimen book. It has survived not 
+				only five centuries, but also the leap into electronic typesetting, remaining essentially 
+				unchanged.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="mod3" class="modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Rome</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<img src="Resursi/Slike/rome.jpg" style="width: 100%;">
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+				has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+				took a galley of type and scrambled it to make a type specimen book. It has survived not 
+				only five centuries, but also the leap into electronic typesetting, remaining essentially 
+				unchanged.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(function(){                       /*read more/less dugme*/
+		$(".expand").on("click", function(){
+			var dugmeId = $(this).attr("id");
+			$('#n' + dugmeId).toggle();
+			$('#s' + dugmeId).toggle();
+			$(this).text(function(i, text){
+				return text === "Read more" ? "Read less" : "Read more";
+			});
+		});
+	});
+</script>
+
+<p class="5" style="display:none;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+took a galley of type and scrambled it to make a type specimen book. It has survived not 
+only five centuries, but also the leap into electronic typesetting, remaining essentially 
+unchanged.</p>
+<p class="6" style="display:none;">has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+took a galley of type and scrambled it to make a type specimen book. It has survived not 
+only five centuries, but also the leap into electronic typesetting, remaining essentially 
+unchanged.</p>
+<p class="7" style="display:none;">only five centuries, but also the leap into electronic typesetting, remaining essentially
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+took a galley of type and scrambled it to make a type specimen book. It has survived not  
+unchanged.</p>
+<p class="8" style="display:none;">took a galley of type and scrambled it to make a type specimen book. It has survived not
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+has been the industry's standard dummy text ever since the 1500s, when an unknown printer  
+only five centuries, but also the leap into electronic typesetting, remaining essentially 
+unchanged.</p>
+
 </body>
 </html>
